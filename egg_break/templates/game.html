@@ -1,0 +1,15 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>Break the Egg</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/basic.css')}}">
+		<link rel="shorcut icon" href="{{url_for('static', filename='img/favicon.ico')}}">
+	</head>
+
+	<body>
+		<h2>What inside this EGG?</h3>
+		<img id="fullEgg" src="{{url_for('static', filename='img/egg.jpg')}}" style="width:400px", alt="EGG">
+		<h4>Try to break it if you want to know</h4>
+		<button onclick="{{url_for('static', filename='js/main.js')}}">Beat the EGG!</button>
+	</body>
+</html>

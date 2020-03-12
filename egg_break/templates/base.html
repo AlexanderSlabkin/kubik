@@ -2,9 +2,28 @@
 <html>
 	<head>
 		<title>Break the Egg</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/basic.css')}}">
+		<link rel="shorcut icon" href="{{url_for('static', filename='img/favicon.ico')}}">
 	</head>
 
 	<body>
-		<img src="/static/egg.jpg", alt="EGG">
+		<p>
+			<div align="right"><i>EggBreaker</i>:
+				<a href="{{url_for('home_page')}}">Home</a>
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('game') }}">Stats</a>
+			</div>
+	  </p>
+		<hr>
+
+		<h1>What is inside the EGG?????</h1>
+		{% block content %}
+
+		{% endblock %}
+			<p>
+			 <form action="{{ url_for('game') }}">
+				<button type="submit">Go</button>
+			 </form>
+			</p>
 	</body>
 </html>

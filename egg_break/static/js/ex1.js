@@ -1,0 +1,1 @@
+allert('JS was LOADED')
