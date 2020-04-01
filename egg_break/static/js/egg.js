@@ -2,7 +2,7 @@ var ticks = 0;
 
 function changeEgg() {
   ticks ++;
-  document.getElementById('ticksField').innerHTML = 'Постучал по яйцу ' + ticks + ' раз'
+
   if (ticks == 3){
     document.getElementById("fullEgg").src = "/static/img/egg1.jpg";
   }
@@ -16,6 +16,7 @@ function changeEgg() {
     document.getElementById("fullEgg").src = "/static/img/egg.jpg";
     ticks = 0;
   }
+  document.getElementById('ticksField').innerHTML = 'Постучал по яйцу ' + ticks + ' раз'
 }
 
 function changeText() {

@@ -1,15 +1,27 @@
-<!DOCTYPE HTML5>
-<html>
-	<head>
-		<title>Break the Egg</title>
-		<link rel="stylesheet" href="{{url_for('static', filename='css/basic.css')}}">
-		<link rel="shorcut icon" href="{{url_for('static', filename='img/favicon.ico')}}">
-	</head>
+{% extends "base.html" %}
 
-	<body>
-		<h2>What inside this EGG?</h3>
-		<img id="fullEgg" src="{{url_for('static', filename='img/egg.jpg')}}" style="width:400px", alt="EGG">
+{% block content %}
+		<div align="center">
+		<h2 id="Header">What inside this EGG? (Кто сидит в яйце)</h2>
+		{% if current_user.is_authenticated %}
+		<h2><i>Hi {{ current_user.username }}!</i></h2>
+		{% endif %}
+		<img id="fullEgg" src="{{ url_for('static', filename='img/egg.jpg') }}" style="width:500px" alt="EGG">
 		<h4>Try to break it if you want to know</h4>
-		<button onclick="{{url_for('static', filename='js/main.js')}}">Beat the EGG!</button>
-	</body>
-</html>
+
+		<script src="{{ url_for('static', filename='js/egg.js')}}"></script>
+		<p id="ticksField">Постучал по яйцу 0 раз</p>
+
+		<button onclick="document.getElementById('demo').innerHTML = Date()">Show date</button>
+		<button onclick="showEgg()">Turn On/Off the EGG!</button>
+			<a href="#" class="myButton" onclick="changeEgg()">Стукнуть</a>
+
+
+
+
+		<button type="button" onclick="changeText()">Change Text</button>
+
+		</div>
+		<p id="demo"></p>
+
+ {% endblock %}

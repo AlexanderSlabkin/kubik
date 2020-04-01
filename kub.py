@@ -1,1 +1,1 @@
-from egg_break import my_app
+from egg_break import my_app, db

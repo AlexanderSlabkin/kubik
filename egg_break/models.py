@@ -7,7 +7,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(16), primary_key=True)
 
     def __str__(self):
-        return f'User: {username}'
+        return f'User: {self.username}'
 
     def get_id(self):
         return self.username
