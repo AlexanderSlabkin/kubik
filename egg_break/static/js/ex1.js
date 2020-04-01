@@ -1,1 +1,0 @@
-allert('JS was LOADED')
