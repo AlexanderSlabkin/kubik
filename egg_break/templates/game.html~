@@ -11,21 +11,17 @@
 
 		<script src="{{ url_for('static', filename='js/egg.js')}}"></script>
 		<p id="ticksField">Постучал по яйцу 0 раз</p>
-<!--
+
 		<button onclick="document.getElementById('demo').innerHTML = Date()">Show date</button>
 		<button onclick="showEgg()">Turn On/Off the EGG!</button>
-		<button type="button" onclick="changeText()">Change Text</button>
-					<a href="#" class="myButton" onclick="changeEgg()">Стукнуть</a>-->
+		<!--			<a href="#" class="myButton" onclick="changeEgg()">Стукнуть</a>-->
 			
-		<button type="button" class="btn bts-warning" onclick="showDate()">Show Date</button>
-		<button type="button" class="btn bts-warning" onclick="showEGG()">Turn On/Off the EGG!</button>
 		<button type="button" class="btn bts-warning" onclick="changeEgg()">Стукнуть</button>
-		<button type="button" class="btn bts-warning" onclick="changeText()">Change Text</button>
-		
 
 
 
 
+		<button type="button" onclick="changeText()">Change Text</button>
 
 		</div>
 		<p id="demo"></p>
